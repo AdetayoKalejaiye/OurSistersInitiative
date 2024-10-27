@@ -9,9 +9,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest --watchAll",
-    "lint": "expo lint",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "lint": "expo lint"
   },
   "jest": {
     "preset": "jest-expo"
@@ -52,6 +50,5 @@
     "react-test-renderer": "18.2.0",
     "typescript": "~5.3.3"
   },
-  "private": true,
-  "homepage": "http://adetayokalejaiye.github.io/OurSistersInitiative"
+  "private": true
 }
