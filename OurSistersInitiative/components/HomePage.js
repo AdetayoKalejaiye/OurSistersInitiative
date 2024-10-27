@@ -143,8 +143,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 20,
-    position: 'relative', // Ensure this container is positioned correctly
+    position: 'relative',
+    zIndex: 100, // Add this line
   },
+  
   logo: {
     width: 40,
     height: 40,
