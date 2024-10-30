@@ -6,9 +6,6 @@ __pycache__/
 venv/
 env/
 
-# Instance folder
-instance/
-
 # Environment variables
 *.env
 
