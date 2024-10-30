@@ -35,7 +35,7 @@ def create_app():
     db.init_app(app)
     jwt.init_app(app)
     login_manager.init_app(app)
-    migrate.init_app(app)
+    migrate.init_app(app, db)
     
     # Check if we're in production mode
     if app.config.get('ENV') == 'production' or not app.config.get('DEBUG', False):
