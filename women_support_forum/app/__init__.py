@@ -87,7 +87,7 @@ def fetch_and_store_news():
     all_articles = []
 
     for keyword in keywords:
-        url = f"https://api.currentsapi.services/v1/search?apiKey={API_KEY}&keywords={keyword}&language=en"
+        url = f"https://api.currentsapi.services/v1/search?apiKey=G5PJv04JeTT1GJYLVEuPmnWqDU5i62qmZVojzQ_coFF7EzRg&keywords={keyword}&language=en"
         response = requests.get(url)
         if response.status_code == 200:
             news_data = response.json().get('news', [])
@@ -134,6 +134,6 @@ def fetch_and_store_news():
 
 def add_scheduler_jobs():
     # Schedule the job to run every 30 minutes
-    scheduler.add_job(func=fetch_and_store_news, trigger='interval', minutes=240, id='news_job', replace_existing=True)
+    scheduler.add_job(func=fetch_and_store_news, trigger='interval', minutes=40, id='news_job', replace_existing=True)
     scheduler.add_job(func=delete_old_posts_and_comments, trigger='interval', hours=1, id='delete_old_content_job', replace_existing=True)
 
