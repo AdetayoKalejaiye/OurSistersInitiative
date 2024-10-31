@@ -134,6 +134,6 @@ def fetch_and_store_news():
 
 def add_scheduler_jobs():
     # Schedule the job to run every 30 minutes
-    scheduler.add_job(func=fetch_and_store_news, trigger='interval', minutes=FETCH_INTERVAL, id='news_job', replace_existing=True)
+    scheduler.add_job(func=fetch_and_store_news, trigger='interval', minutes=240, id='news_job', replace_existing=True)
     scheduler.add_job(func=delete_old_posts_and_comments, trigger='interval', hours=1, id='delete_old_content_job', replace_existing=True)
 
